@@ -6,6 +6,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('about');
+  this.route('contact');
+});
+
+export default Ember.Route.extend({
+  model() {
+    return this.store.findAll('rental');
+  },
 });
 
 export default Router;
